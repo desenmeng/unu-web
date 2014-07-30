@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css" rel="stylesheet">
+    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/semantic-ui/0.16.1/javascript/semantic.min.js"></script>
+</head>
+<body>
+<div class="ui grid">
+    <div class="three wide column">
+    </div>
+    <div class="ten wide column">
+        <div class="ui green icon message">
+            <i class="stethoscope icon"></i>
+            <div class="content">
+                <div class="header">
+                    unu
+                </div>
+                <p>Find Unused CSS</p>
+            </div>
+        </div>
+        <form class="ui form green  attached fluid segment">
+            <p>Let's go ahead and get you signed up.</p>
+            <div class="field">
+                <label>User Agent</label>
+                <div class="ui selection dropdown" id="userAgent">
+                    <input type="hidden" name="ua">
+
+                    <div class="text">Android</div>
+                    <i class="dropdown icon"></i>
+
+                    <div class="menu ui transition hidden">
+                        <div class="item active" data-value="0">Android</div>
+                        <div class="item" data-value="1">IPhone</div>
+                        <div class="item" data-value="2">IPAD</div>
+                        <div class="item" data-value="3">WP</div>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label>URL</label>
+                <input type="text" id="url"  placeholder="http://m.baidu.com">
+            </div>
+            <div class="ui blue submit button" style="float: right">Submit</div>
+        </form>
+    </div>
+    <div class="three wide column">
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
