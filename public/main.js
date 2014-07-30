@@ -13,6 +13,7 @@
             ]
         }
     };
+    $('#result').hide();
     $('.ui.form').form(formRules,{
         on: 'blur',
         inline:true,
@@ -24,12 +25,27 @@
                     userAgent:$('#userAgent').dropdown('get text')
                 }
             };
+            $('#result').hide();
             $.ajax('/unu', {
                 data: data
-            }).then(function(data){
-                console.log(data);
-            })
+            }).then(function(css){
+                $('#result').show();
+                $('#css-unused-length').text('('+css.unused.length+')');
+                $('#css-used-length').text('('+css.used.length+')');
+                $.each(css.unused,function(key,value){
+                    var li = $('<li class="item">').text(value);
+                    $('#css-unused').append(li);
+                });
+                $.each(css.used,function(key,value){
+                    var li = $('<li class="item">').text(value);
+                    $('#css-used').append(li);
+                });
+
+            },function(error){
+                alert(error);
+            });
         }
     });
     $('.ui.dropdown').dropdown();
+    $('.ui.accordion').accordion();
 })();

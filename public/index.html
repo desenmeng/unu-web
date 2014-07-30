@@ -2,10 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>test</title>
-    <link href="http://cdn.staticfile.org/semantic-ui/0.16.1/css/semantic.min.css" rel="stylesheet">
-    <script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/semantic-ui/0.16.1/javascript/semantic.min.js"></script>
+    <title>unu-web</title>
+    <link href="http://cdn.bootcss.com/semantic-ui/0.16.1/css/semantic.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/semantic-ui/0.16.1/javascript/semantic.min.js"></script>
 </head>
 <body>
 <div class="ui grid">
@@ -16,13 +16,13 @@
             <i class="stethoscope icon"></i>
             <div class="content">
                 <div class="header">
-                    unu
+                    unu-web
                 </div>
                 <p>Find Unused CSS</p>
             </div>
         </div>
         <form class="ui form green  attached fluid segment">
-            <p>Let's go ahead and get you signed up.</p>
+            <p>Input and Submit</p>
             <div class="field">
                 <label>User Agent</label>
                 <div class="ui selection dropdown" id="userAgent">
@@ -43,8 +43,30 @@
                 <label>URL</label>
                 <input type="text" id="url"  placeholder="http://m.baidu.com">
             </div>
-            <div class="ui blue submit button" style="float: right">Submit</div>
+            <div class="ui green submit button" style="float: right">Submit</div>
         </form>
+        <div class="ui    piled segment" id="result">
+            <div class="ui  accordion">
+                <div class="active title">
+                    <i class="frown icon"></i>
+                    Unused<span id="css-unused-length"></span>
+                </div>
+                <div class="active content">
+                    <ul class="ui ordered list" id="css-unused">
+                    </ul>
+                </div>
+                <div class="title">
+                    <i class="smile icon"></i>
+                    Used<span id="css-used-length"></span>
+                </div>
+                <div class="content">
+                    <ul class="ui ordered list" id="css-used">
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        </div>
     </div>
     <div class="three wide column">
     </div>
