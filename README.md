@@ -12,7 +12,7 @@ cd unu-web
 
 npm install
 
-node index.js(if you installed forever,you can use **npm start**)
+node index.js(if you installed forever,you can use *npm start*)
 
 ```
 
